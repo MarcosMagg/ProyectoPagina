@@ -1,0 +1,323 @@
+
+//gridd de juegos 
+//grid de devil may cry 5 y control
+.main-paraJuegos{
+    min-height: $porcentaje + 50%;
+    min-width: $porcentaje + 50%;
+}
+.grid-container > *{
+    box-shadow: $boxshadowGrid;
+    border-radius: $border-radius15 - 11px;
+    padding: $font-size12 - 2px;
+    text-align: $aligItemTitulo;
+}
+.grid-container{
+    display: $displayG;
+    gap: $font-size12 - 2px;
+    grid-template-columns: 1fr;
+    grid-template-rows: $grid-templaterows5Repeat;
+    grid-template-areas: 
+    "one"
+	"two"
+	"three"
+	"four"
+	"five"
+    "six"
+    "seven";
+}
+.one{
+    grid-area: one;
+    background-color: $colorgridBlue;
+}
+.two{
+    grid-area: two;
+    background: $colorgridBlue;
+    object-fit: cover;
+}
+.three{
+    grid-area: three;
+    justify-content: $aligItemTitulo;
+    align-items: $aligItemTitulo;
+    background: $colorgridBlue;
+}
+
+.four{
+    grid-area: four;
+    background-color: $colorgridBlue;
+}
+.five{
+    grid-area: five;
+    background-color: $colorgridBlue;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+
+@mixin mediasGrid ($breakpoint){
+    @if $breakpoint == Tablet{
+      @media screen and (min-width: 768px){
+        @content;
+        }  
+    }
+    @if $breakpoint == mobile{
+        @media screen and (min-width:350px){
+          @content;
+        }
+    }
+    @if $breakpoint == desktop{
+        @media screen and (min-width:1024px){
+          @content;
+        }
+    }  
+}
+
+    @include mediasGrid(mobile){
+        .grid-container{
+            grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "seven";
+        }
+    }
+    @include mediasGrid(Tablet){
+        .grid-container{
+            @include gridTablet(repeat(2,1fr),30vh 40vh 30vh);
+            grid-template-areas: 
+            "one one" 
+            "two three" 
+            "four five"
+            "six  seven";
+        }
+    }
+    @include mediasGrid(desktop){
+        .grid-container{
+            @include gridDesktop(45vw 25vw 25vw,20vh 50vh 30vh auto);
+            grid-template-areas: 
+            "one one one" 
+            "two three three"
+            "two four five"
+            "six  six seven";
+        }
+    }
+.grid-container{
+    img{
+        height: $porcentaje + 50%;
+        width: $porcentaje + 50%;
+    }
+    h1{
+        margin-top: $font-size16 + 19px;
+        color: $colorBlanco;
+        text-shadow: $textShadowGrid;
+        letter-spacing: $font-size12 - 7px;
+        cursor: pointer;
+        text-transform: $textTransformUp;
+        transition: 1s;
+        &:hover{
+            color: $colorBlanco;
+            text-shadow: $textShadowGrid;;
+        }
+    }
+    a{
+        font-size: $fontsizeM;
+        &:hover{
+            font-size: $fontsizeL;
+            padding: $paddingGridH1;
+            color: $colorNegro;
+            background-color: $colorBlanco;
+            transition: $transitionEase;
+            border-radius: $border-radius15;
+        }
+    }
+}
+.p-juegos{
+    padding-top: $font-size12 - 11px;
+    text-align: $textalignStar;
+    margin-top: $font-size12 - 2px;
+    padding-bottom: $font-size12 - 11px;
+    background-color: $colorgridBlue;
+    border-radius: $border-radius15 + 5px;
+    margin-bottom: $font-size12 - 7px;
+    &:hover{
+        color: $colorBlanco;
+        transition: $transform0ease1Seg;
+    }
+}
+.p-juegosParaFive{
+    font-size: $fontsizeM;
+    padding-top: $font-size12 - 7px;
+    justify-content: $aligItemTitulo;
+    text-align: $textalignStar;
+    border-radius: $border-radius15 + 5px;
+}
+.p-juegosParaFour{
+    padding-top: $font-size16 + 14px;
+}
+///////////////////////
+//grid para Control
+.bodyred{
+    background-image: url(../imagenes/red_light_background_hd_red_aesthetic.jpg);
+}
+.grid-containerRed > *{
+    box-shadow: $boxshadowGrid;
+    border-radius: $border-radius15 - 11px;
+    padding: $font-size12 - 2px;
+    text-align: $aligItemTitulo;
+}
+.grid-containerRed{
+    display: $displayG;
+    gap: $font-size12 - 2px;
+    grid-template-columns: 1fr;
+    grid-template-rows: $grid-templaterows5Repeat;
+    grid-template-areas: 
+    "oneControl"
+	"twoControl"
+	"threeControl"
+	"fourContol"
+	"fiveControl"
+    "sixControl"
+    "sevenControl";
+}
+.oneControl{
+	
+	grid-area: oneControl; 
+    background-color: $colorgridRed;
+}
+
+.twoControl{
+	
+	grid-area: twoControl;
+}
+
+.threeControl{
+	grid-area: threeControl;
+    justify-content: $aligItemTitulo;
+    align-items: $aligItemTitulo;
+    
+}
+.fourControl{
+	grid-area: fourControl;
+    background-color: $colorgridRed;
+}
+
+
+.fiveControl{
+	grid-area: fiveControl;
+    background-color: $colorgridRed;
+}
+
+.sixControl{
+    grid-area: sixControl;
+}
+.sevenControl{
+    grid-area: sevenControl;
+}
+
+@mixin mediasGridRed ($breakpoint){
+    @if $breakpoint == Tablet{
+      @media screen and (min-width: 768px){
+        @content;
+        }  
+    }
+    @if $breakpoint == mobile{
+        @media screen and (min-width:350px){
+          @content;
+        }
+    }
+    @if $breakpoint == desktop{
+        @media screen and (min-width:1024px){
+          @content;
+        }
+    }  
+}
+@include mediasGridRed(mobile){
+    .grid-containerRed{
+        grid-template-areas: 
+        "oneControl"
+        "twoControl"
+        "threeControl"
+        "fourControl"
+        "fiveControl"
+        "sixControl"
+        "sevenControl";
+    }
+}
+@include mediasGridRed(Tablet){
+    .grid-containerRed{
+        @include gridTablet(repeat(2,1fr),30vh 40vh 30vh);
+        grid-template-areas: 
+        "oneControl oneControl" 
+        "twoControl threeControl" 
+        "fourControl fiveControl"
+        "sixControl  sevenControl";
+    }
+}
+@include mediasGridRed(desktop){
+    .grid-containerRed{
+        @include gridDesktop(45vw 25vw 25vw,20vh 50vh 30vh auto);
+        grid-template-areas: 
+        "oneControl oneControl oneControl" 
+        "twoControl threeControl threeControl"
+        "twoControl fourControl fiveControl"
+        "sixControl  sixControl sevenControl";
+    }
+}
+.grid-containerRed{
+    img{
+        height: $porcentaje + 50%;
+        width: $porcentaje + 50%;
+    }
+    h1{
+        margin-top: $font-size16 + 19px;
+        color: $colorBlanco;
+        text-shadow: $textShadowGridRed;
+        letter-spacing: $font-size12 - 7px;
+        cursor: pointer;
+        text-transform: $textTransformUp;
+        transition: 1s;
+        &:hover{
+            color: $colorBlanco;
+            text-shadow: $textShadowGridRed;
+        }
+    }
+    a{
+        font-size: $fontsizeM;
+        &:hover{
+            font-size: $fontsizeL;
+            padding: $paddingGridH1;
+            color: $colorNegro;
+            background-color: $colorBlanco;
+            transition: $transitionEase;
+            border-radius: $border-radius15;
+        }
+    }
+}
+.p-juegosRed{
+    padding-top: $font-size12 - 11px;
+    text-align: $textalignStar;
+    margin-top: $font-size12 - 2px;
+    padding-bottom: $font-size12 - 11px;
+    background-color: $colorgridRed;
+    border-radius: $border-radius15 + 5px;
+    margin-bottom: $font-size12 - 7px;
+    &:hover{
+        color: $colorBlanco;
+        transition: $transform0ease1Seg;
+    }
+}
+.p-juegosParaFiveRed{
+    font-size: $fontsizeM;
+    padding-top: $font-size12 - 7px;
+    justify-content: $aligItemTitulo;
+    text-align: $textalignStar;
+    border-radius: $border-radius15 + 5px;
+}
+.p-juegosParaFourRed{
+    padding-top: $font-size16 + 14px;
+}

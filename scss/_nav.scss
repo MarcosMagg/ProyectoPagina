@@ -1,0 +1,219 @@
+*{/*cambia el estilo para todas las etiquetas*/
+  font-family: $mainFont;
+  box-sizing: $boxSizingGeneral;
+  text-decoration: underline none;
+}
+
+header{
+    background-image: url(../imagenes/1411287.webp);
+    background-position: $backPosition;
+    background-size: $backSize;
+    h1{
+      @include h1Headers(700,30px);
+    }
+    div{
+      &:hover{
+        @include tituloHover(0 10px 0 10px,#fff,#000,15px,large,all 0.7s ease);
+      }
+    }
+}
+
+.aTitulo{
+  display: $displayTitulo;
+  align-items: $aligItemTitulo;
+  text-decoration:  $textDecoTITULO;
+  &:hover{
+    @include tituloHover(0 10px 0 10px,#fff,#000,15px,large,all 0.7s ease);
+  }
+}
+
+nav{
+    @include navGeneral(150px,100%,flex,space-between,center);
+    p{
+      font-size: $navP;
+    }
+}
+.nav div{
+  display: $displayTitulo;
+}
+.logo{
+  margin-right: $logomarginR;
+  height: $logoHeight;
+  width: $logowidth;
+}
+.bar-btn{
+  @include bar-btn(25px,#fff,20px,pointer);
+}
+.nav-menu{
+  @include navMenu(fixed,100%,0vw,134px,rgb(0, 0, 0, .95),$aligItemTitulo,$transform);
+    li{
+      display: $display;
+      line-height: $lineHeigtNav;
+      margin: $marginNav;
+      transition: $transitionNav;
+      a{
+        color: $colorBlanco;
+        font-size: $font-size16;
+        text-transform: $textTransformUp;
+        font-weight: $font-weight600;
+      }
+    }
+  
+}
+.nav-menu li a.active, .nav-menu li a:hover{
+  padding: 5px 10px;
+  background: $colorBlanco;
+  color: $colorNegro;
+  border-radius: $border-radius15;
+  font-size:$fontsizeL;
+  transition: $transform;
+}
+
+#check{
+  display: $displayN;
+}
+#check:checked ~ .nav-menu{/*mostrar u ocultar el menu responsive cada ves que se de click en el icono*/
+  height: $height100;
+}
+#check:checked ~ .nav-menu li{
+  display: $displayB;
+}
+
+@mixin medias ($breakpoint){
+  @if $breakpoint == Table{
+    @media screen and (min-width: 768px){
+      @content
+}}}
+
+@include medias(Table){
+  nav{
+    height: $height100px + 50px;
+  }
+  .bar-btn{
+    display: $displayN;
+  }
+  .nav-menu{
+    position: $positionR;
+    height: $height100px;
+    top: 0;
+    background: $backgroundNone;
+    transition: $transitionNone;
+    text-align: $textalignR;
+    margin-right: $marginright50px;
+  }
+  .nav-menu li{
+    display: $displayInline;
+    line-height: $height100px;
+    margin: 0 20px;
+    transition: $transitionNone;
+  }
+  .nav-menu li a{
+    font-size: $font-size12;
+  }
+  .banner-text h1{
+    font-size: $font-size70;
+    margin-bottom: $font-size12 + 18;
+  }
+  .banner-text .h2{
+    font-size: $font-size12 + 8;
+  }
+}
+
+.pading{
+  padding-top: $pading50px;
+  padding-left: $pading50px;
+  padding-right: $pading50px;
+}
+
+.h2{
+  padding-top: $pading50px;
+  font-size: $font-size12+18;
+}
+
+body{
+  background-image: url(https://celes.club/uploads/posts/2022-06/1654698613_10-celes-club-p-sinii-gradient-oboi-krasivie-11.jpg);
+  background-position: $positionC;
+  background-size: $backSizeCover;
+  margin: 0;
+}
+
+ul{
+  color: $colorBlanco;
+}
+a{
+  color: $colorBlanco;
+  text-decoration: $transitionNone;
+}
+nav a{
+  font-weight: $font-weight900;
+}
+main{
+  color: $colorBlanco;
+  font-size: $font-size12 + 8;
+  section{
+    img{
+      height: $height100px + 200;
+      border-radius: $border-radius15;
+      overflow: $overflowHiden;
+    }
+    p{
+      &:hover{
+        transition: $transitionEase;
+        color: $color219;
+      }
+    }
+  }
+}
+main h2{
+  padding-left: $pading50px;
+}
+
+body::-webkit-scrollbar{
+  width: $font-size12 + 3;
+  background-color: $color47;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: $color17;
+  border-radius: $border-radius15 + 5px;
+}
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active{
+  background: $color101;
+}
+
+.section-barra{
+  display: $displayF;
+  overflow-y: $overflowY;
+  margin-left: $marginright50px;
+  margin-right: $marginright50px;
+  text-align: $aligItemTitulo;
+  
+  div{
+    padding: $paddingBarraDiv;
+    background: $color1;
+    border-radius: $border-radius15 + 15px;
+  }
+  p{
+    display: $display-wewbox;
+    -webkit-box-orient: $verticalV;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: $overflowHiden;
+    &:hover{
+      display: $displayB;
+    }
+  }
+}
+
+.section-barra::-webkit-scrollbar{
+  height: $height100px - 85px;
+}
+.section-barra::-webkit-scrollbar-thumb{
+  background-color: $color17;
+  border-radius: $border-radius15 + 5px;
+}
+.section-barra::-webkit-scrollbar-track:hover,/*si dejo solo este hover se imluminara el fondo de la barra, no la barra*/
+.section-barra::-webkit-scrollbar-track:active{/*si lo combinamos hace que cuando se haga click el dfondo de la bara se volvera blanco*/
+    background: $color101;
+}
+

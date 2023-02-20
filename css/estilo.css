@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+* { /*cambia el estilo para todas las etiquetas*/
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  text-decoration: underline none;
+}
+
+header {
+  background-image: url(../imagenes/1411287.webp);
+  background-position: center;
+  background-size: cover;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+header div:hover {
+  padding: 0 10px 0 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+  font-size: large;
+  transition: all 0.7s ease;
+}
+
+.aTitulo {
+  display: flex;
+  align-items: center;
+  text-decoration: underline none;
+}
+.aTitulo:hover {
+  padding: 0 10px 0 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+  font-size: large;
+  transition: all 0.7s ease;
+}
+
+nav {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav p {
+  font-size: large;
+}
+
+.nav div {
+  display: flex;
+}
+
+.logo {
+  margin-right: 15px;
+  height: 150px;
+  width: auto;
+}
+
+.bar-btn {
+  font-size: 25px;
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vw;
+  top: 134px;
+  background: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  transform: all 0.7s ease;
+}
+.nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.7s;
+}
+.nav-menu li a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+  padding: 5px 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+  font-size: large;
+  transition: all 0.7s ease;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav-menu { /*mostrar u ocultar el menu responsive cada ves que se de click en el icono*/
+  height: 100vw;
+}
+
+#check:checked ~ .nav-menu li {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    height: 150px;
+  }
+  .bar-btn {
+    display: none;
+  }
+  .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+  .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+  }
+  .nav-menu li a {
+    font-size: 12px;
+  }
+  .banner-text h1 {
+    font-size: 70px;
+    margin-bottom: 30px;
+  }
+  .banner-text .h2 {
+    font-size: 20px;
+  }
+}
+.pading {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.h2 {
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+body {
+  background-image: url(https://celes.club/uploads/posts/2022-06/1654698613_10-celes-club-p-sinii-gradient-oboi-krasivie-11.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+}
+
+ul {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a {
+  font-weight: 900;
+}
+
+main {
+  color: #fff;
+  font-size: 20px;
+}
+main section img {
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+main section p:hover {
+  transition: all 0.7s ease;
+  color: rgb(219, 217, 224);
+}
+
+main h2 {
+  padding-left: 50px;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+  background-color: rgb(47, 127, 218);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(17, 17, 69);
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: rgb(101, 197, 238);
+}
+
+.section-barra {
+  display: flex;
+  overflow-y: scroll;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+.section-barra div {
+  padding: 5px 5px 5px 0;
+  background: rgb(1, 43, 70);
+  border-radius: 30px;
+}
+.section-barra p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+}
+.section-barra p:hover {
+  display: block;
+}
+
+.section-barra::-webkit-scrollbar {
+  height: 15px;
+}
+
+.section-barra::-webkit-scrollbar-thumb {
+  background-color: rgb(17, 17, 69);
+  border-radius: 20px;
+}
+
+.section-barra::-webkit-scrollbar-track:hover,
+.section-barra::-webkit-scrollbar-track:active { /*si lo combinamos hace que cuando se haga click el dfondo de la bara se volvera blanco*/
+  background: rgb(101, 197, 238);
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+input {
+  outline: none;
+  box-sizing: border-box;
+  height: 60px;
+  width: 0px;
+  padding: 0 20px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #110707;
+  transition: all 0.7s ease;
+}
+
+.bta {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 80px;
+  height: 80px;
+  background: rgb(0, 0, 0);
+  line-height: 80px;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.bta i {
+  font-size: 25px;
+  color: #fff;
+  line-height: 80px;
+  transition: all 0.7s ease;
+}
+
+.container:hover input {
+  width: 350px;
+}
+
+.container:hover i {
+  transform: rotate(-360deg);
+}
+
+.btn:hover {
+  background: #2face1;
+}
+
+.containerSesion {
+  margin-left: 28%;
+  /*margin-right: 15%;*/
+  padding-right: 50px;
+}
+
+.juegos {
+  display: flex;
+  justify-content: center;
+  top: 60%;
+  padding-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.juegos div {
+  padding: 10px 10px 5px 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: rgb(1, 43, 70);
+  border-radius: 30px;
+  text-align: center;
+}
+.juegos div p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+}
+.juegos div p:hover {
+  display: block;
+}
+
+.h3-juegos {
+  padding-top: 180px;
+  padding-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer img {
+  height: 70px;
+  width: 70px;
+  margin-top: 50px; /*si aca pongo un pading en vez de margin, hago que la imagen gire sobre un eje 50px arriba de ella*/
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+footer img:hover {
+  transition: all 0.7s ease;
+  transform: rotate(360deg);
+}
+
+@media screen and (min-width: 350px) {
+  .juegos {
+    display: contents;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .juegos {
+    display: flex;
+  }
+}
+.main-paraJuegos {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 25vh);
+  grid-template-areas: "one" "two" "three" "four" "five" "six" "seven";
+}
+
+.one {
+  grid-area: one;
+  background-color: #160574;
+}
+
+.two {
+  grid-area: two;
+  background: #160574;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.three {
+  grid-area: three;
+  justify-content: center;
+  align-items: center;
+  background: #160574;
+}
+
+.four {
+  grid-area: four;
+  background-color: #160574;
+}
+
+.five {
+  grid-area: five;
+  background-color: #160574;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+@media screen and (min-width: 350px) {
+  .grid-container {
+    grid-template-areas: "one" "two" "three" "four" "five" "six" "seven";
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30vh 40vh 30vh;
+    grid-template-areas: "one one" "two three" "four five" "six  seven";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 45vw 25vw 25vw;
+    grid-template-rows: 20vh 50vh 30vh auto;
+    grid-template-areas: "one one one" "two three three" "two four five" "six  six seven";
+  }
+}
+.grid-container img {
+  height: 100%;
+  width: 100%;
+}
+.grid-container h1 {
+  margin-top: 35px;
+  color: #fff;
+  text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.grid-container h1:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+.grid-container a {
+  font-size: medium;
+}
+.grid-container a:hover {
+  font-size: large;
+  padding: 5px 10px;
+  color: #000;
+  background-color: #fff;
+  transition: all 0.7s ease;
+  border-radius: 15px;
+}
+
+.p-juegos {
+  padding-top: 1px;
+  text-align: start;
+  margin-top: 10px;
+  padding-bottom: 1px;
+  background-color: #160574;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+.p-juegos:hover {
+  color: #fff;
+  transition: all 0.1s ease;
+}
+
+.p-juegosParaFive {
+  font-size: medium;
+  padding-top: 5px;
+  justify-content: center;
+  text-align: start;
+  border-radius: 20px;
+}
+
+.p-juegosParaFour {
+  padding-top: 30px;
+}
+
+.bodyred {
+  background-image: url(../imagenes/red_light_background_hd_red_aesthetic.jpg);
+}
+
+.grid-containerRed > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-containerRed {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 25vh);
+  grid-template-areas: "oneControl" "twoControl" "threeControl" "fourContol" "fiveControl" "sixControl" "sevenControl";
+}
+
+.oneControl {
+  grid-area: oneControl;
+  background-color: #740505;
+}
+
+.twoControl {
+  grid-area: twoControl;
+}
+
+.threeControl {
+  grid-area: threeControl;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourControl {
+  grid-area: fourControl;
+  background-color: #740505;
+}
+
+.fiveControl {
+  grid-area: fiveControl;
+  background-color: #740505;
+}
+
+.sixControl {
+  grid-area: sixControl;
+}
+
+.sevenControl {
+  grid-area: sevenControl;
+}
+
+@media screen and (min-width: 350px) {
+  .grid-containerRed {
+    grid-template-areas: "oneControl" "twoControl" "threeControl" "fourControl" "fiveControl" "sixControl" "sevenControl";
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid-containerRed {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30vh 40vh 30vh;
+    grid-template-areas: "oneControl oneControl" "twoControl threeControl" "fourControl fiveControl" "sixControl  sevenControl";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-containerRed {
+    grid-template-columns: 45vw 25vw 25vw;
+    grid-template-rows: 20vh 50vh 30vh auto;
+    grid-template-areas: "oneControl oneControl oneControl" "twoControl threeControl threeControl" "twoControl fourControl fiveControl" "sixControl  sixControl sevenControl";
+  }
+}
+.grid-containerRed img {
+  height: 100%;
+  width: 100%;
+}
+.grid-containerRed h1 {
+  margin-top: 35px;
+  color: #fff;
+  text-shadow: 0 0 5px #f40303, 0 0 25px #f40303, 0 0 50px #f40303, 0 0 100px #f40303;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.grid-containerRed h1:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #f40303, 0 0 25px #f40303, 0 0 50px #f40303, 0 0 100px #f40303;
+}
+.grid-containerRed a {
+  font-size: medium;
+}
+.grid-containerRed a:hover {
+  font-size: large;
+  padding: 5px 10px;
+  color: #000;
+  background-color: #fff;
+  transition: all 0.7s ease;
+  border-radius: 15px;
+}
+
+.p-juegosRed {
+  padding-top: 1px;
+  text-align: start;
+  margin-top: 10px;
+  padding-bottom: 1px;
+  background-color: #740505;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+.p-juegosRed:hover {
+  color: #fff;
+  transition: all 0.1s ease;
+}
+
+.p-juegosParaFiveRed {
+  font-size: medium;
+  padding-top: 5px;
+  justify-content: center;
+  text-align: start;
+  border-radius: 20px;
+}
+
+.p-juegosParaFourRed {
+  padding-top: 30px;
+}/*# sourceMappingURL=estilo.css.map */

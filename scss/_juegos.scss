@@ -1,0 +1,140 @@
+//barra de busqueda
+.container{
+    position: $positionA;
+    left: $porcentaje;
+    top:$porcentaje - 20%;
+    transform: $transformTrans;
+    padding: $pading50px - 40px;
+}
+input{
+    outline: $displayN;
+    box-sizing: $boxSizingGeneral;
+    height: $height100px - 40px;
+    width: 0px;
+    padding: $paddingInput;
+    color: $colorNegro;
+    border-radius: $border-radius15 + 35px;
+    font-size: $font-size12 + 8px;
+    border: $bordeInput;
+    transition: $transitionEase;
+}
+.bta{
+    position: $positionA;
+    right: $font-size12 - 12px;
+    top: $font-size12 - 12px;
+    width: $height100px - 20px;
+    height: $height100px - 20px;
+    background: $color0;
+    line-height: $height100px - 20px;
+    border-radius: $border-radius15 + 35px;
+    text-align: $aligItemTitulo;
+    cursor: pointer;
+    transition: .5s;
+    i{
+        font-size: $font-size16 + 9px;
+        color: $colorBlanco;
+        line-height: $height100px - 20px;
+        transition: $transitionEase;
+    }
+}
+.container:hover input {
+    width: $height100px + 250px ;
+}
+.container:hover i{
+	transform: $transformRotate;
+}
+.btn:hover{
+    background: $color2;
+}
+
+
+.containerSesion {
+    margin-left: 28%;
+    /*margin-right: 15%;*/
+    padding-right: 50px;
+}
+
+.juegos{
+    display: $displayF;
+    justify-content: $aligItemTitulo;
+    top: $porcentaje + 10%;
+    padding-top: $font-size70 - 20px;
+    margin-left: $height100px;
+    margin-right: $height100px;
+    div{
+        padding: $paddingDivJuegos;
+        margin-right: $marginright50px - 30px;
+        margin-left: $marginright50px - 30px;
+        background-color: $color1;
+        border-radius: $border-radius15 + 15px;
+        text-align: $aligItemTitulo;
+        p{
+           display: $display-wewbox; 
+           -webkit-box-orient: $verticalV;
+           -webkit-line-clamp: 1;
+           line-clamp: 1;
+           overflow: $overflowHiden;
+           &:hover{
+            display: $displayB;
+           }
+        }
+    }
+}
+
+
+.h3-juegos{
+    padding-top: $height100px + 80px;
+    padding-left: $font-size70 - 20px;
+    margin-right: $font-size70 - 20px;
+    text-align: $aligItemTitulo;
+}
+
+footer{
+    display: $displayF;
+    justify-content: $aligItemTitulo;
+    img{
+    height: $height100px - 30px;
+    width: $height100px - 30px;
+    margin-top: $height100px - 50px; /*si aca pongo un pading en vez de margin, hago que la imagen gire sobre un eje 50px arriba de ella*/
+    margin-left: $font-size12 - 7px;
+    margin-right: $font-size12 - 7px;
+    border-radius: $porcentaje + 50%;
+    overflow: $overflowHiden;
+    &:hover{
+        transition: $transitionEase;
+        transform: $rotate360;
+    }
+    }
+}
+@mixin mediasJuegos($breakpoint){
+    @if $breakpoint == mobile{
+        @media screen and (min-width: 350px){
+          @content;
+        }          
+    }
+    @if $breakpoint == desktop{
+        @media screen and (min-width: 1024px){
+            @content;
+        }
+    }
+    @if $breakpoint == tablet{
+        @media screen and (min-width: 750px){
+            @content; 
+        }  
+    }
+}
+
+
+@include mediasJuegos(mobile){
+    .juegos{
+         display:contents;
+        }
+    }
+@include mediasJuegos(desktop){
+    .juegos{
+        display: flex;
+    }
+}
+
+
+

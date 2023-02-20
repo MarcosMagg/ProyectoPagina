@@ -1,0 +1,24 @@
+{
+  "name": "mar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+    "sass:watch": "sass --watch scss/estilo.scss  css/estilo.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosMagg/ProyectoPagina.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcosMagg/ProyectoPagina/issues"
+  },
+  "homepage": "https://github.com/MarcosMagg/ProyectoPagina#readme",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
+}

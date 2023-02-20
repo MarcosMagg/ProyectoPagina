@@ -1,0 +1,147 @@
+//variables globales
+$mainFont:'Roboto', sans-serif;
+$boxSizingGeneral: border-box;
+$backPosition: center;
+$backSize:cover;
+$bordeInput:1px solid #110707;
+
+$rotate360: rotate(360deg);
+
+$grid-templateColumns1fr: 1fr;
+$grid-templaterows5Repeat: repeat(5,25vh);
+
+$transformRotate: rotate(-360deg);
+$verticalV: vertical;
+$pading50px: 50px;
+$paddingGridH1: 5px 10px;
+$paddingInput: 0 20px;
+$paddingDivJuegos:10px 10px 5px 10px;
+$porcentaje: 50%;
+
+$boxshadowGrid:-1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+$border-radius15: 15px;
+$colorBlanco: #fff;
+$colorNegro: #000;
+$color219:rgb(219, 217, 224);
+$color47:rgb(47, 127, 218);
+$color17:rgb(17, 17, 69);
+$color101:rgb(101, 197, 238);
+$color1:rgb(1, 43, 70);
+$color0:rgb(0, 0, 0);
+$color2:#2face1;
+$colorgridBlue:#160574;
+$colorgridRed:#740505;
+$backgroundNone: none;
+
+$overflowHiden: hidden;
+$overflowY: scroll;
+
+$paddingBarraDiv: 5px 5px 5px 0;
+
+$font-weight900:900;
+$font-size16: 16px;
+$font-size12: 12px;
+$font-size70: 70px;
+$fontsizeL: large;
+$fontsizeM: medium;
+$font-weight600: 600;
+$textTransformUp: uppercase;
+$textalignR: right;
+$textShadowGrid: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4, 
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+$textShadowGridRed: 0 0 5px #f40303,
+    0 0 25px #f40303, 
+    0 0 50px #f40303,
+    0 0 100px #f40303; 
+
+$textalignStar: start;
+$displayG: grid;
+$displayN: none;
+$displayB: block;
+$displayF: flex;
+$displayInline: inline-block;
+$display-wewbox: -webkit-box;
+
+$positionR:relative;
+$positionC:center;
+$positionA:absolute;
+
+$backSizeCover: cover;
+
+$marginright50px: 50px;
+$height100px: 100px;
+
+$breakpointMobile: 450px;
+$breakpointTablet: 768px;
+$breakpointPc:1024px;
+
+$height100: 100vw;
+@mixin h1Headers($weight,$size){
+    font-weight: $weight;
+    font-size: $size;
+}
+
+//titulo
+$displayTitulo: flex;
+$aligItemTitulo: center;
+$textDecoTITULO: underline none;
+$transform: all 0.7s ease;
+
+//.nav
+$display:none;
+$lineHeigtNav: 30px;
+$marginNav: 50px 0;
+$transitionNav: all 0.7s;
+$transitionEase: all 0.7s ease;
+$transitionNone: none;
+$transformTrans: translate(-50%,-50%);
+$transform0ease1Seg:all 0.1s ease;
+
+@mixin gridTablet($gridTemplateColumns,$gridTemplateRows){
+    grid-template-columns: $gridTemplateColumns;
+    grid-template-rows: $gridTemplateRows;
+}
+@mixin gridDesktop($gridTemplateColumnsDesk,$gridTemplateRowsDesk){
+    grid-template-columns: $gridTemplateColumnsDesk;
+    grid-template-rows: $gridTemplateRowsDesk;
+}
+
+@mixin tituloHover($padding,$background,$color,$border-radius,$font-size,$transition){
+    padding: $padding;
+    background: $background;
+    color:$color;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    transition: $transition;
+}
+@mixin navGeneral($heigt,$witdh,$display,$justify-content,$align-items){
+    height: $heigt;
+    width: $witdh;
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+$navP: large;
+$logomarginR:15px;
+$logoHeight:150px;
+$logowidth: auto;
+
+@mixin bar-btn($fontsize,$color,$marginR,$cursor){
+    font-size: $fontsize;
+    color:#fff;
+    margin-right: 20px;
+    cursor: $cursor;
+}
+@mixin navMenu($position,$width,$height,$top,$background,$textalign,$transform){
+    position: $position;
+    width: $width;
+    height: $height;
+    top: $top;
+    background: $background;
+    text-align: $aligItemTitulo;
+    transform: $transform;
+    
+}
+
