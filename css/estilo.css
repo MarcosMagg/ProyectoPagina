@@ -242,6 +242,48 @@ body::-webkit-scrollbar-track:active {
   background: rgb(101, 197, 238);
 }
 
+.body-404 {
+  background-image: url(../imagenes/673328.png);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.container-404 {
+  color: white;
+  margin-top: 10vh;
+  margin-left: 20vh;
+  margin-right: 110vh;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #000;
+}
+.container-404 div {
+  padding: 10px 5px 10px 5px;
+}
+.container-404 h1 {
+  font-weight: 500;
+  font-size: xx-large;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 20vh;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+.boton p:hover {
+  padding: 0 10px 0 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+  font-size: large;
+  transition: all 0.7s ease;
+}
+
 .container {
   position: absolute;
   left: 50%;

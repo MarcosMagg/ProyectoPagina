@@ -217,3 +217,45 @@ body::-webkit-scrollbar-track:active{
     background: $color101;
 }
 
+.body-404{
+    background-image: url(../imagenes/673328.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+.container-404{
+  color: white;
+  margin-top: 10vh;
+  margin-left: 20vh;
+  margin-right: 110vh;
+  border-radius: 50px;
+  text-align: center;
+  background-color: $colorNegro;
+
+
+  div{
+    padding: 10px 5px 10px 5px;
+  }
+  h1{
+   font-weight: 500;
+   font-size: xx-large;
+  }
+  
+  
+  
+}
+.boton{
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 20vh;
+  text-decoration: none;
+  background: $colorNegro;
+  color: $colorBlanco;
+  padding: 10px 15px;
+  border-radius: 20px;
+  p{
+    &:hover{
+      @include tituloHover(0 10px 0 10px,#fff,#000,15px,large,all 0.7s ease);
+  }
+}
+}
